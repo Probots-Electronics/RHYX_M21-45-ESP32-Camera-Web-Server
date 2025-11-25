@@ -1,78 +1,40 @@
-ESP32-CAM Video Streaming Web Server
+# ESP32-CAM Video Streaming Web Server
 
-A simple, lightweight video streaming web server for the AI-Thinker ESP32-CAM module. This project creates a standalone web page that streams MJPEG video directly from the ESP32.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/platform-ESP32-orange.svg)
+![Arduino](https://img.shields.io/badge/framework-Arduino-00979D.svg)
 
-Features
+A simple, lightweight video streaming web server for the **AI-Thinker ESP32-CAM** module. This project creates a standalone web page that streams MJPEG video directly from the ESP32 to your browser.
 
-Instant Streaming: MJPEG video stream accessible via web browser.
+## 📸 Hardware Compatibility
 
-Self-Contained: HTML and CSS are embedded in the code (no SPIFFS upload required).
+This code is specifically tested and verified for:
 
-Simple Interface: Clean, dark-themed web UI.
+* **Board:** Generic ESP32-CAM (AI-Thinker Model)
+* **Camera Module:** Rhynx M21-45 (OV2640 2MP)
 
-Hardware Required
+> **Note:** This is the version often identified by the "Rhynx M21-45" text printed on the black camera ribbon cable. While designed for the Rhynx M21-45, this code should also work with standard OV2640 camera modules commonly found on AI-Thinker boards.
 
-ESP32-CAM Board (AI-Thinker Model recommended)
+## ✨ Features
 
-FTDI Programmer (USB-to-TTL) for uploading code
+* **Instant Streaming:** MJPEG video stream accessible via web browser.
+* **Self-Contained:** HTML and CSS are embedded in the code (no SPIFFS upload required).
+* **Simple Interface:** Clean, dark-themed web UI.
 
-5V Power Supply
+## 🛠️ Hardware Required
 
-Software Requirements
+* **ESP32-CAM Board**
+* **FTDI Programmer** (USB-to-TTL) for uploading code
+* **5V Power Supply**
+* Jumper wires
 
-Arduino IDE (1.8.x or 2.x)
+## 💻 Software Requirements
 
-ESP32 Board Manager installed in Arduino IDE
+* **Arduino IDE** (1.8.x or 2.x)
+* **ESP32 Board Manager** installed in Arduino IDE
 
-Setup & Installation
+## ⚙️ Setup & Installation
 
-Clone the Repository:
-
+### 1. Clone the Repository
+```bash
 git clone [https://github.com/YOUR_USERNAME/ESP32-CAM-WebServer.git](https://github.com/YOUR_USERNAME/ESP32-CAM-WebServer.git)
-
-
-Open the Project:
-Open CameraWebServer.ino in the Arduino IDE.
-
-Configure WiFi:
-Edit CameraWebServer.ino and enter your WiFi credentials:
-
-const char *ssid = "YOUR_WIFI_NAME";
-const char *password = "YOUR_WIFI_PASSWORD";
-
-
-Board Settings:
-
-Board: AI Thinker ESP32-CAM
-
-CPU Frequency: 240MHz (WiFi/BT)
-
-Flash Frequency: 80MHz
-
-PSRAM: Enabled
-
-Upload:
-
-Connect GPIO 0 to GND.
-
-Press the Reset button on the ESP32-CAM.
-
-Click Upload in Arduino IDE.
-
-Once uploaded, remove the connection between GPIO 0 and GND.
-
-Usage
-
-Open the Serial Monitor (baud rate 115200).
-
-Press the Reset button on the ESP32-CAM.
-
-The Serial Monitor will display an IP address (e.g., http://192.168.1.100).
-
-Enter that IP address in your web browser.
-
-Click Start Stream (or view the stream directly).
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
